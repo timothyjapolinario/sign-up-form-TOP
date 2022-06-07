@@ -1,0 +1,35 @@
+@font-face {
+    font-family: norse-bold;
+    src: url("../fonts/Norse-Bold.otf");
+}
+
+body{
+    margin:0;
+}
+.first-column{
+    position: relative;
+    width: max(30vw, 300px);
+    height: 100vh;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+}
+.site-title{
+    position: absolute;
+    top:30%;
+    text-align: center;
+    width: 100%;
+    font-family: norse-bold;
+    font-size: 7rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.247);
+}
+.site-title::before{
+    display: inline-block;
+    content: "";
+    width: 5rem;
+    height: 7rem;
+    background-image: url("../images/odin-lined.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
