@@ -3,12 +3,23 @@
     src: url("../fonts/Norse-Bold.otf");
 }
 
+.input{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+:root{
+    --padding-left-second-column:40px
+}
+
 body{
     margin:0;
+    display: flex;
+    flex-direction: row;
 }
 .first-column{
     position: relative;
-    width: max(30vw, 300px);
+    width: 30vw;
     height: 100vh;
     background-image: url("../images/background.jpg");
     background-size: cover;
@@ -32,4 +43,57 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.second-column{
+    background-color: rgb(226, 226, 226);
+    width: 70vw;
+}
+.second-column>p:first-child{
+    font-weight: 900;
+    padding-left: var(--padding-left-second-column);
+    padding-top: 7vh;
+}
+.signup-area{
+    height: 60vh;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+.signup-area>p:first-child{
+    font-weight:700;
+    font-size: 1.5rem;
+}
+input{
+    width: 200px;
+    position: relative;
+}
+label{
+    width: 200px;
+    display: block;
+    font-size: .8rem;
+}
+.signup-area__inputs{
+    display: flex;
+    gap: 5rem;
+    background-color: white;
+    box-shadow: 0 8px 15px;
+    width: 70vw;
+    padding-left: var(--padding-left-second-column);
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+
+.signup-area__inputs label{
+    margin-top: 15px;
+}
+input:invalid{
+    outline: none;
+    border: 1px solid red;
+}
+
+label + input{
+    margin-top:3px;
+    font-size: 1.1rem;
+}
+
+
 
