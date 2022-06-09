@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/styelsheet.css">
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
     <div class="first-column">
@@ -24,25 +25,29 @@
                 <div class = "signup-area__inputs">
                     <p>Let's do this!</p>
                     <div>
-                        <label for="first-name" >FIRST NAME</label>
-                        <input type="text" name="first-name" id="first-name">
-                        <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email">
-                        <label for="password">PASSWORD</label>
-                        <input type="text" name="password" id="password">
-                    </div>
-                    
-                    <div>
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" name="last-name" id="last-name">
-                        <label for="phone-number">PHONE NUMBER</label>
-                        <input type="text" name="phone-number" id="phone-number">
-                        <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="text" name="confirm-password" id="confirm-password">
+                        <div>
+                            <label for="first-name" >FIRST NAME</label>
+                            <input type="text" name="first-name" id="first-name">
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" id="email">
+                            <label for="password">PASSWORD</label>
+                            <input type="text" name="password" id="password">
+                            <span></span>
+                        </div>
+                        
+                        <div>
+                            <label for="last-name">LAST NAME</label>
+                            <input type="text" name="last-name" id="last-name">
+                            <label for="phone-number">PHONE NUMBER</label>
+                            <input type="number" name="phone-number" id="phone-number">
+                            <label for="confirm-password">CONFIRM PASSWORD</label>
+                            <input type="password" name="confirm-password" id="confirm-password">
+                        </div>
                     </div>
                 </div>
             <input type="submit" value="Create Account">
             </form>
+            <p class="have-account-text">Already have an account? <span>Log in</span></p>
         </div>
     </div>
 </body>

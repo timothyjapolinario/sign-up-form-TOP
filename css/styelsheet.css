@@ -3,11 +3,10 @@
     src: url("../fonts/Norse-Bold.otf");
 }
 
-.input{
-    -webkit-appearance: none;
-    appearance: none;
-}
 
+body{
+    overflow: scroll;
+}
 :root{
     --padding-left-second-column:40px
 }
@@ -62,37 +61,88 @@ body{
     font-weight:700;
     font-size: 1.5rem;
 }
-input{
-    width: 200px;
-    position: relative;
-}
+
 label{
     width: 200px;
     display: block;
     font-size: .8rem;
 }
 .signup-area__inputs{
-    display: flex;
-    gap: 5rem;
-    background-color: white;
+    
+    background-color: transparent;
     box-shadow: 0 8px 15px;
-    width: 70vw;
+    width: calc(70vw- var(--padding-left-second-column));
     padding-left: var(--padding-left-second-column);
     padding-top:5px;
     padding-bottom: 5px;
+    height: 50vh;
 }
 
 .signup-area__inputs label{
     margin-top: 15px;
 }
+
+.signup-area__inputs > div{
+    display:flex;
+    gap: 5rem;
+}
+.signup-area__inputs > p:first-child{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+input{
+    -webkit-appearance: none;
+    appearance: none;
+}
+input{
+    width: 200px;
+    position: relative;
+    border-radius: 5px;
+    border: 2px solid rgba(61, 61, 61, 0.548);
+}
 input:invalid{
-    outline: none;
-    border: 1px solid red;
+    outline:transparent;
+    border: 2px solid red;
+}
+
+input:focus{
+    border: 2px solid rgb(87, 87, 255);
+    outline: transparent;
 }
 
 label + input{
     margin-top:3px;
     font-size: 1.1rem;
+}
+input[type="submit"]{
+    margin-top: 20px;
+    margin-left: var(--padding-left-second-column);
+    padding: 20px 15px;
+    background-color: rgb(27, 94, 7);
+    border-radius:5px;
+    border: 0 none; 
+    color: white;
+    font-weight: 700;
+}
+#password:invalid + span{
+    position: relative;
+}
+#password:invalid + span::before{
+    content: "*Password do not match!";
+    color: red;
+    font-size: .9rem;
+    position: absolute; 
+    width: 200px;
+    top: 22px;
+    right: 0;
+}
+.have-account-text{
+    margin-left: var(--padding-left-second-column);
+}
+.have-account-text > span {
+    color: rgb(27, 94, 7);
+    font-weight: 700;
 }
 
 
